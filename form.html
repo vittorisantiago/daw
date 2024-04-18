@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/Daw/images/favicon.ico" type="image/x-icon">
+        <title>Desarrollo web</title>
+    </head>
+    <body>
+        <header>
+            <a href="/Daw/index.html">Volver</a>
+        </header>
+        <main>
+            <h2>Formulario</h2>
+            <form action="mailto:?subject=Actividad clase 3" method="post" enctype="text/plain">
+                <div>
+                    <label for="nameId">Nombre</label>
+                    <input type="text" name="name" id="nameId" placeholder="Introduzca su nombre" required maxlength="10">
+                </div>
+                <div>
+                    <label for="lastnameId">Apellido</label>
+                    <input type="text" name="lastname" id="lastnameId" placeholder="Introduzca su apellido" required>
+                </div>
+                <div>
+                    <label for="emailId">Correo</label>
+                    <input type="email" name="email" id="emailId" required>
+                </div>
+                <div>
+                    <label for="selectId">Seleccionar opción</label>
+                    <select name="option" id="selectId">
+                        <option value="option1">Primero</option>
+                        <option value="option2">Segundo</option>
+                        <option value="option3">Tercero</option>
+                        <option value="option4" selected>Cuarto</option>
+                        <option value="option5">Quinto</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="checkbox" name="materia" id="materia1Id" value="materia1">
+                    <label for="materia1Id">Desarrollo web</label>
+                    <input type="checkbox" name="materia" id="materia2Id" value="materia2">
+                    <label for="materia2Id">Gestión empresaria</label>
+                    <input type="checkbox" name="materia" id="materia3Id" value="materia3">
+                    <label for="materia3Id">Base de datos</label>
+                </div>
+                <div>
+                    <label for="radioId">Turno</label>
+                    <input type="radio" name="radio" id="radioId" value="option1">
+                    <label for="radioId">Mañana</label>
+                    <input type="radio" name="radio" id="radioId" value="option2">
+                    <label for="radioId">Tarde</label>
+                    <input type="radio" name="radio" id="radioId" value="option3">
+                    <label for="radioId">Noche</label>
+                </div>
+                <div>
+                    <label for="textareaId">Comentarios</label>
+                    <textarea name="message" id="textareaId" rows="6" cols="50"></textarea>
+                </div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+                <button type="button" onclick="window.location.href='/Daw/index.html'">Cancelar</button>
+            </form>
+        </main>
+    </body>
+</html>
