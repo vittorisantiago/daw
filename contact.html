@@ -5,24 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/Daw/images/favicon.ico" type="image/x-icon">
         <title>Desarrollo web</title>
+        <link rel="stylesheet" href="/Daw/css/normalize.css">
+        <link rel="stylesheet" href="/Daw/css/styles-contact.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
     </head>
     <body>
-        <header>
-            <a href="/Daw/index.html">Volver</a>
-        </header>
+        <header class="fixed-nav">
+            <nav>
+                <ul>
+                    <li><a href="/Daw/index.html">Inicio</a></li>
+                    <li><a href="/Daw/contact.html">Contacto</a></li>
+                    <li><a href="/Daw/news.html">Noticias</a></li>
+                    <li><a href="/Daw/form.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </header>        
         <main>
-            <h1>Contacto</h1>
-
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ol>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
+            <section class="contact-info">
+                <h1>Contacto</h1>
+                <p>¡Gracias por visitarnos! Estamos aquí para ayudarte. Contáctanos utilizando la información a continuación.</p>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. Ovidio Lagos 944, Rosario, CP 2000 🌎</li>
+                    <li><strong>Teléfono:</strong> <a href="tel:+54 3472-2349850">+54 3472-2349850</a></li>
+                    <li><strong>Correo Electrónico:</strong> <a href="mailto:desarolloweb@gmail.com">desarrolloweb@gmail.com</a></li>
+                </ul>
+            </section>
         </main>
     </body>
 </html>
