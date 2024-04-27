@@ -1,0 +1,129 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 20px;
+    background-color: #7EA8BE;
+    margin-top: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 50px; 
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    margin-top: 100px;
+    overflow-y: scroll;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.center-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center-form div {
+    margin-bottom: 15px;
+}
+
+.center-form input[type="submit"] {
+    background-color: #7EA8BE;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.center-form input[type="submit"]:hover {
+    background-color: #5C8598;
+}
+
+.center-form input[type="reset"] {
+    background-color: #7EA8BE;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.center-form input[type="reset"]:hover {
+    background-color: #5C8598;
+}
+
+.cancel-button {
+    background-color: #7EA8BE;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #5C8598;
+}
+
+.center-form label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.center-form input[type="text"], .center-form input[type="email"] {
+    padding: 5px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.center-form select {
+    padding: 5px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.center-form textarea {
+    padding: 5px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+}
