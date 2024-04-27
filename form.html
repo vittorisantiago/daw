@@ -5,14 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/Daw/images/favicon.ico" type="image/x-icon">
         <title>Desarrollo web</title>
+        <link rel="stylesheet" href="/Daw/css/normalize.css">
+        <link rel="stylesheet" href="/Daw/css/styles-form.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
     </head>
     <body>
         <header>
-            <a href="/Daw/index.html">Volver</a>
+            <header class="fixed-nav">
+                <nav>
+                    <ul>
+                        <li><a href="/Daw/index.html">Inicio</a></li>
+                        <li><a href="/Daw/contact.html">Contacto</a></li>
+                        <li><a href="/Daw/news.html">Noticias</a></li>
+                        <li><a href="/Daw/form.html">Formulario</a></li>
+                    </ul>
+                </nav>
         </header>
         <main>
             <h2>Formulario</h2>
-            <form action="mailto:?subject=Actividad clase 3" method="post" enctype="text/plain">
+            <form action="mailto:?subject=Actividad clase 3" method="post" enctype="text/plain" class="center-form">
                 <div>
                     <label for="nameId">Nombre</label>
                     <input type="text" name="name" id="nameId" placeholder="Introduzca su nombre" required maxlength="10">
@@ -39,7 +52,7 @@
                     <input type="checkbox" name="materia" id="materia1Id" value="materia1">
                     <label for="materia1Id">Desarrollo web</label>
                     <input type="checkbox" name="materia" id="materia2Id" value="materia2">
-                    <label for="materia2Id">Gestión empresaria</label>
+                    <label for="materia2Id">Diseño</label>
                     <input type="checkbox" name="materia" id="materia3Id" value="materia3">
                     <label for="materia3Id">Base de datos</label>
                 </div>
@@ -58,7 +71,7 @@
                 </div>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Restablecer">
-                <button type="button" onclick="window.location.href='/Daw/index.html'">Cancelar</button>
+                <button type="button" onclick="window.location.href='/Daw/index.html'" class="cancel-button">Cancelar</button>
             </form>
         </main>
     </body>
