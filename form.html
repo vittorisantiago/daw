@@ -10,10 +10,14 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
+        <script src="https://kit.fontawesome.com/6e6d0e2c72.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <header class="fixed-nav">
+                <div class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
@@ -23,7 +27,7 @@
                     </ul>
                 </nav>
         </header>
-        <main>
+        <main class="main-container">
             <h2>Formulario</h2>
             <form action="mailto:?subject=Actividad clase 3" method="post" enctype="text/plain" class="center-form">
                 <div>
@@ -68,10 +72,12 @@
                 <div>
                     <label for="textareaId">Comentarios</label>
                     <textarea name="message" id="textareaId" rows="6" cols="50"></textarea>
-                </div>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Restablecer">
-                <button type="button" onclick="window.location.href='index.html'" class="cancel-button">Cancelar</button>
+                </div>                
+                <div class="button-container">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Restablecer">
+                    <button type="button" onclick="window.location.href='index.html'" class="cancel-button">Cancelar</button>
+                </div>   
             </form>
         </main>
     </body>
