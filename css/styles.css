@@ -33,6 +33,87 @@ header nav ul li a {
     z-index: 1000;
 }
 
+.menu-icon {
+    display: none;
+}
+
+body {
+    margin-top: 100px;
+    overflow-y: scroll;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icon-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fa-brands {
+    margin: 0 20px;
+    font-size: 200px;
+    transition: transform 0.3s ease; /* Efecto de transición suave */
+}
+
+.fa-brands:hover {
+    transform: scale(1.1) translateZ(10px); /* Escala ligeramente el icono lo mueve hacia adelante*/
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-container section, aside, table {
+    max-width: 700px;
+    width: 100%;
+}
+
+.text-container p {
+    text-align: justify;
+}
+
+.centered-table {
+    text-align: center;
+}
+
+.centered-table td {
+    padding: 10px;
+}
+
 footer {
     padding: 20px;
     margin-top: 20px;
@@ -40,19 +121,35 @@ footer {
     text-align: center;
 }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
+@media screen and (max-width: 768px) {
+
+    .text-container section, aside, table {
+        max-width: 80%;
+    }
 }
 
-img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+@media screen and (max-width: 640px) {
+    nav {
+        display: none;
+    }
 
-body {
-    margin-top: 100px;
-    overflow-y: scroll;
+    .menu-icon {
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon i {
+        font-size: 30px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .text-container section, aside, table {
+        max-width: 80%;
+        width: 100%;
+    }
 }
