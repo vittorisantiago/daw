@@ -86,6 +86,11 @@ aside {
     align-items: center;
 }
 
+.content a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .article {
     position: relative;
     flex: 1;
