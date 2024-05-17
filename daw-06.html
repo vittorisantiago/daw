@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <title>Desarrollo web</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles-daw-06.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/6e6d0e2c72.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header-container">
+            <div class="header-content">
+                <div class="header-inner">
+                    <div class="menu-bell">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <img src="./images/Logo.svg" alt="El informador logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="current-date">DOM 19/2024</span> <!-- Se debe actualizar con Javascript -->
+                </div>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#">Últimas Noticias</a></li>
+                    <li><a href="#">Economía</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Deportes</a></li>
+                    <li><a href="#">Entretenimiento</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Internacional</a></li>
+                </ul>
+            </nav>
+            <nav class="desktop-nav">
+                <ul class="nav-cards">
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Ultimas-noticias.png" alt="Últimas noticias">
+                            <span>Últimas noticias</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Economía.png" alt="Economía">
+                            <span>Economía</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Política.png" alt="Política">
+                            <span>Política</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Deportes.png" alt="Deportes">
+                            <span>Deportes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Entretenimiento.png" alt="Entretenimiento">
+                            <span>Entretenimiento</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Tecnología.png" alt="Tecnología">
+                            <span>Tecnología</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/nav/Internacional.png" alt="Internacional">
+                            <span>Internacional</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <aside class="left-sidebar">
+                <!-- Contenido lateral izquierdo -->
+                <h2>Autores destacados</h2>
+                <div class="authors">
+                    <div class="author-item">
+                        <img src="./images/autores/francisco-jueguen.avif" alt="Imagen de Francisco Jueguen" class="author-img">
+                        <p>Francisco Jueguen</p>
+                    </div>
+                    <div class="author-item">
+                        <img src="./images/autores/laura-ventura.avif" alt="Imagen de Laura Ventura" class="author-img">
+                        <p>Laura Ventura</p>
+                    </div>
+                    <div class="author-item">
+                        <img src="./images/autores/fernando-bertello.avif" alt="Imagen de Fernando Bertello" class="author-img">
+                        <p>Fernando Bertello</p>
+                    </div>
+                    <div class="author-item">
+                        <img src="./images/autores/luisa-corradini.avif" alt="Imagen de Luisa Corradini" class="author-img">
+                        <p>Luisa Corradini</p>
+                    </div>
+                    <div class="author-item">
+                        <img src="./images/autores/joaquin-sola.avif" alt="Imagen de Joaquín Morales Solá" class="author-img">
+                        <p>Joaquín Morales Solá</p>
+                    </div>
+                    <div class="author-item">
+                        <img src="./images/autores/luis-majul.avif" alt="Imagen de Luis Majul" class="author-img">
+                        <p>Luis Majul</p>
+                    </div>
+                </div>
+            </aside>        
+            <main class="main-content">
+                <section class="content">
+                    <article class="article">
+                        <div class="image-container">
+                            <img src="./images/noticias/moneda.png" alt="Dinero">
+                            <a href="#" class="read-more">Ver nota completa</a>
+                        </div>
+                        <p>Economía global: Informe pronostica crecimiento sostenido para el próximo año.</p>
+                    </article>
+                    <article class="article">
+                        <div class="image-container">
+                            <img src="./images/noticias/cancer.webp" alt="Cáncer">
+                            <a href="#" class="read-more">Ver nota completa</a>
+                        </div>
+                        <p>Lucha contra el cáncer: Investigadores descubren nueva terapia prometedora.</p>
+                    </article>
+                    <article class="featured-article">
+                        <img src="./images/noticias/online.webp" alt="Notebook sobre escritorio">
+                        <div class="content">
+                            <a href="#">
+                                <h2>Adelanto</h2>
+                                <p>Educación en línea: Crece la demanda de cursos virtuales en 2024.</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="featured-article">
+                        <img src="./images/noticias/harry-styles.webp" alt="Harry Styles">
+                        <div class="content">
+                            <a href="#">
+                                <h2>Exlusivo celebridades</h2>
+                                <p>Harry Styles anuncia proyecto benéfico para combatir la crisis climática.</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <div class="image-container">
+                            <img src="./images/noticias/javier-milei.webp" alt="Milei">
+                            <a href="#" class="read-more">Ver nota completa</a>
+                        </div>
+                        <p>Javier Milei: Anunció cuándo se podrán retirar las entradas para asistir a la presentación de su libro.</p>
+                    </article>
+                    <article class="article">
+                        <div class="image-container">
+                            <img src="./images/noticias/messi.webp" alt="Messi">
+                            <a href="#" class="read-more">Ver nota completa</a>
+                        </div>                    
+                        <p>Inter Miami: Con Messi de titular, empata contra Montreal y se mantiene como líder de la Conferencia Este</p>
+                    </article>
+                </section>
+                <div class="view-more">
+                    <button>
+                        <i class="fa-solid fa-rotate"></i>Ver más noticias
+                    </button>
+                </div>
+            </main>
+            <aside class="right-sidebar">
+                <!-- Contenido lateral derecho -->
+                <h2>Últimas noticias</h2>
+                <div class="latest-news">
+                    <div class="news-item">
+                        <span class="news-time">11:30 AM</span>
+                        <a href="#">
+                            <p>Crisis en Venezuela: Agravamiento político.</p>
+                        </a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-time">10:45 AM</span>
+                        <a href="#">
+                            <p>Tensión en Medio Oriente: Conflictos en curso.</p>
+                        </a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-time">09:15 AM</span>
+                        <a href="#">
+                            <p>Buenas cosechas: Optimismo en el agro.</p>
+                        </a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-time">08:00 AM</span>
+                        <a href="#">
+                            <p>Milei gana apoyo: Popularidad en alza.</p>
+                        </a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-time">07:20 AM</span>
+                        <a href="#">
+                            <p>Boom de comercio online: Crecimiento en desarrollo web.</p>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>                
+        <footer>
+            <div class="footer-content">
+                <div class="footer-inner">
+                    <div class="logo">
+                        <img src="./images/Logo.svg" alt="El informador logo">
+                    </div>
+                    <div class="footer-items">
+                        <ul>
+                            <li>Términos y condiciones</li>
+                            <li>Política de protección de datos personales</li>
+                            <li>Normas de confidencialidad y privacidad</li>
+                            <li>Defensa del consumidor: para reclamos ingrese <a href="#">aquí</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-google-plus"></i></a>
+                    </div>                
+                </div>
+            </div>
+        </footer>        
+    </body>    
+</html>
