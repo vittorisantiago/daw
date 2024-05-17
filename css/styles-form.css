@@ -33,20 +33,32 @@ header nav ul li a {
     z-index: 1000;
 }
 
+.menu-icon {
+    display: none;
+}
+
 body {
-    margin-top: 100px;
     overflow-y: scroll;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
 h2 {
-    margin-bottom: 40px;
-    font-size: 36px;
+    padding: 36px;
     text-align: center;
+    font-size: 40px;;
 }
 
 .center-form {
     max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 
@@ -54,76 +66,69 @@ h2 {
     margin-bottom: 15px;
 }
 
-.center-form input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    background-color: #7EA8BE;
-    color: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.center-form input[type="submit"]:hover {
-    background-color: #5C8598;
-}
-
-.center-form input[type="reset"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    background-color: #7EA8BE;
-    color: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.center-form input[type="reset"]:hover {
-    background-color: #5C8598;
-}
-
-.cancel-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7EA8BE;
-    color: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.cancel-button:hover {
-    background-color: #5C8598;
-}
-
-.center-form label {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.center-form input[type="text"], .center-form input[type="email"] {
-    padding: 5px;
-    width: 100%;
-    margin-top: 5px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
-.center-form select {
-    padding: 5px;
-    width: 100%;
-    margin-top: 5px;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-}
-
+.center-form input[type="text"],
+.center-form input[type="email"],
+.center-form select,
 .center-form textarea {
     padding: 5px;
     width: 100%;
     margin-top: 5px;
     border-radius: 10px;
     font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container input[type="submit"],
+.button-container input[type="reset"],
+.button-container .cancel-button {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #7EA8BE;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button-container input[type="submit"]:hover,
+.button-container input[type="reset"]:hover,
+.button-container .cancel-button:hover {
+    background-color: #5C8598;
+}
+
+
+@media screen and (max-width: 768px) {
+    .center-form {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon i {
+        font-size: 30px;
+    }
+
+    .center-form {
+        max-width: 80%;
+    }
+
+    .button-container {
+        flex-wrap: wrap;
+    }
 }
