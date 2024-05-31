@@ -1,0 +1,312 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231 221 216);
+    margin: 0;
+    padding: 0;
+}
+
+.header-inner .fa-bell {
+    display: none;
+}
+
+.header-inner span {
+    display: none;
+}
+
+.header-content {
+    background-color: rgb(214 205 201);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 20px;
+}
+
+.header-inner i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-inner img {
+    max-width: 70%;
+}
+
+/* Estilos para el menú lateral */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Oculto fuera de la pantalla */
+    width: 300px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(214 205 201);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 3px 0 10px rgba(0 0 0 / 20%);
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar-menu ul li {
+    margin: 20px 0;
+}
+
+.sidebar-menu ul li a {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.sidebar-menu .close-menu {
+    padding: 10px;
+    text-align: right;
+}
+
+/* Clase para mostrar el menú lateral */
+.sidebar-menu.show {
+    left: 0;
+}
+
+/* Estilos para el formulario */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#form-container {
+    max-width: 1500px;
+    width: 100%;
+}
+
+#form-title {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+#subscription-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+}
+
+.error-message {
+    display: none;
+    margin-top: 5px;
+    color: rgb(255 0 0);
+    font-size: 14px;
+}
+
+.form-group.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(51 51 51);
+    color: rgb(255 255 255);
+}
+
+/* Estilos para el footer */
+.footer-content {
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 50%);
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 250px;
+}
+
+.footer-items {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.footer-items ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-items li {
+    margin-bottom: 10px;
+    flex: 0 0 calc(50% - 10px);
+    margin-right: 20px;
+}
+
+.footer-items li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.footer-items a {
+    color: rgb(51 51 51);
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-icons i {
+    margin-right: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: rgb(0 0 0);
+}
+
+.footer-content > div:not(:first-child):not(:last-child) {
+    border-bottom: 1px solid rgba(0 0 0 / 20%);
+}
+
+/* Estilos para tablet */
+@media screen and (min-width: 640px) and (max-width: 768px) {
+    .header-content i {
+        font-size: 25px;
+    }
+    
+    .header-content img {
+        max-width: 400px;
+    }
+}
+
+/* Estilos para desktop */
+@media screen and (min-width: 769px) {
+    .header-inner .fa-magnifying-glass {
+        display: none;
+    }
+
+    .header-inner {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .menu-bell {
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+
+    .menu-bell i {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .fa-bars {
+        left: 0;
+    }
+
+    .menu-bell .fa-bell {
+        display: block;
+        left: 40px;
+    }
+
+    .header-inner .fa-solid {
+        font-size: 25px;
+    }
+
+    .header-inner img {
+        flex: 1;
+        max-width: 450px;
+        margin-right: -104px;
+    }
+
+    .header-inner span {
+        display: block;
+    }
+
+    .sidebar-menu .close-menu i {
+        cursor: pointer;
+    }
+
+    #subscription-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .form-group {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
+
+    .form-group.form-group.button-container {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-group button {
+        max-width: 200px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .form-group button:hover {
+        background-color: rgb(85 85 85);
+    }
+
+    .footer-inner {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    
+    .social-icons i {
+        margin-right: 10px;
+        font-size: 50px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-icons i:hover {
+        transform: scale(1.1);
+    }
+}
