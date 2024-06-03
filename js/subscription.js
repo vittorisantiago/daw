@@ -66,6 +66,15 @@ document.addEventListener("DOMContentLoaded", function() {
         pageOverlay.style.display = 'none'; // Ocultar el overlay
     });
 
+    var isSubscribed = localStorage.getItem('subscribed') === 'true';
+    var submitButton = document.getElementById('subscribe-button');
+    var subscribedMessage = document.getElementById('subscribed-message');
+
+    if (isSubscribed) {
+        submitButton.disabled = true;
+        subscribedMessage.style.display = "block";
+    }
+
     // Validar el nombre completo
     function validateFullName() {
         var fullName = fullNameInput.value.trim();
@@ -275,6 +284,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 text: 'La información ha sido cargada correctamente.',
                 icon: 'success'
             }).then(function() {
+                // Guardar el estado de suscripción en localStorage
+                localStorage.setItem('subscribed', 'true');
                 window.location.href = "daw-06.html";
             });
         } else {
@@ -286,25 +297,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Manejar evento keydown para actualizar el título del formulario
-    function handleKeydown(event) {
+    // Manejar evento input para actualizar el título del formulario en tiempo real
+    function handleInput(event) {
         if (event.target.id === "fullName") {
             var fullName = event.target.value.trim();
             if (fullName) {
                 formTitle.textContent = "HOLA " + fullName;
+                formTitle.style.display = "block";  // Mostrar el título cuando hay texto
             } else {
                 formTitle.textContent = "HOLA";
+                formTitle.style.display = "none";  // Ocultar el título cuando no hay texto
             }
-        }
-    }
-
-    // Función para manejar el evento input en el campo de Nombre Completo
-    function handleInput() {
-        var fullName = fullNameInput.value.trim();
-        if (fullName.length > 0) {
-            formTitle.style.display = "block";
-        } else {
-            formTitle.style.display = "none";
         }
     }
 
@@ -332,8 +335,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cityInput.addEventListener("focus", handleFocus);
     postalCodeInput.addEventListener("focus", handleFocus);
     dniInput.addEventListener("focus", handleFocus);
-
-    fullNameInput.addEventListener("keydown", handleKeydown);
 
     form.addEventListener("submit", handleSubmit);
 });
