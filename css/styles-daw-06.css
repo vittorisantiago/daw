@@ -346,6 +346,7 @@ aside {
     .header-inner img {
         flex: 1;
         max-width: 450px;
+        margin-right: -104px;
     }
 
     .header-inner span {
