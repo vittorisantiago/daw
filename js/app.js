@@ -1,17 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Mostrar el modal al cargar la página
-    Swal.fire({
-        title: 'Suscríbete a nuestro diario',
-        text: 'Recibe las últimas noticias directamente en tu correo electrónico.',
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonText: 'Suscribirme',
-        cancelButtonText: 'Cerrar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.href = 'subscription.html';
-        }
-    });
+    // Verificar si el usuario ya está suscripto
+    var isSubscribed = localStorage.getItem('subscribed') === 'true';
+
+    if (!isSubscribed) {
+        // Mostrar el modal si no está suscripto
+        Swal.fire({
+            title: 'Suscríbete a nuestro diario',
+            text: 'Recibe las últimas noticias directamente en tu correo electrónico.',
+            icon: 'info',
+            confirmButtonText: 'Suscribirme',
+            showCloseButton: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'subscription.html';
+            }
+        });
+    }
 
     // Función para mostrar la fecha actual
     var dateElement = document.querySelector(".current-date");
