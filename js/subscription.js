@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Inicialmente ocultar el título "HOLA"
     formTitle.style.display = "none";
-    
-    // Función para mostrar la fecha actual    
+
+    // Función para mostrar la fecha actual
     var dateElement = document.querySelector(".current-date");
 
     function formatDate(date) {
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Manejar evento submit para validar todos los campos
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
         var isValid = true;
         if (!validateFullName()) isValid = false;
@@ -279,15 +279,61 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!validateDNI()) isValid = false;
 
         if (isValid) {
-            Swal.fire({
-                title: 'Formulario enviado con éxito!',
-                text: 'La información ha sido cargada correctamente.',
-                icon: 'success'
-            }).then(function() {
-                // Guardar el estado de suscripción en localStorage
-                localStorage.setItem('subscribed', 'true');
-                window.location.href = "daw-06.html";
-            });
+            // Obtener los datos del formulario
+            var formData = {
+                name: fullNameInput.value.trim(),
+                email: emailInput.value.trim(),
+                password: passwordInput.value.trim(),
+                age: parseInt(ageInput.value.trim(), 10),
+                phone: phoneInput.value.trim(),
+                address: addressInput.value.trim(),
+                city: cityInput.value.trim(),
+                postalCode: postalCodeInput.value.trim(),
+                dni: dniInput.value.trim()
+            };
+
+            try {
+                // Enviar datos a la URL
+                var response = await fetch('https://jsonplaceholder.typicode.com/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Convertir la respuesta a JSON
+                var data = await response.json();
+
+                if (response.ok) {
+                    // Mostrar modal con los datos recibidos
+                    Swal.fire({
+                        title: 'Suscripción exitosa!',
+                        text: 'Gracias por suscribirte. Aquí están los datos recibidos:\n\n' + JSON.stringify(data, null, 2),
+                        icon: 'success'
+                    }).then(function() {
+                        // Guardar el estado de suscripción en localStorage
+                        localStorage.setItem('subscribed', 'true');
+                        // Guardar los datos recibidos en localStorage
+                        localStorage.setItem('subscriptionData', JSON.stringify(data));
+                        window.location.href = "daw-06.html";
+                    });
+                } else {
+                    // Mostrar modal de error
+                    Swal.fire({
+                        title: 'Error en la suscripción',
+                        text: 'Hubo un problema al procesar tu suscripción. Por favor, intenta nuevamente.',
+                        icon: 'error'
+                    });
+                }
+            } catch (error) {
+                // Mostrar modal de error
+                Swal.fire({
+                    title: 'Error en la suscripción',
+                    text: 'Hubo un problema al procesar tu suscripción. Por favor, intenta nuevamente.',
+                    icon: 'error'
+                });
+            }
         } else {
             Swal.fire({
                 title: 'Errores en el formulario',
