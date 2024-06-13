@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <title>Desarrollo web - Rick and Morty</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles-daw-11.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/6e6d0e2c72.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rick & Morty</h1>
+            <div class="characters-icons">
+                <img src="images/rick-and-morty/morty.svg" alt="Morty" class="icon">
+                <img src="images/rick-and-morty/rick.svg" alt="Rick" class="icon">
+            </div>            
+            <div class="buttons">
+                <button id="getAllCharacters">Get All Characters</button>
+            </div>
+            <div class="filters">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="status" placeholder="Status (alive, dead, unknown)">
+                <input type="text" id="species" placeholder="Species">
+                <input type="text" id="type" placeholder="Type">
+                <input type="text" id="gender" placeholder="Gender (female, male, genderless, unknown)">
+            </div>
+            <button id="filterCharacters">Filter Characters</button>
+            <div id="error" class="error"></div>
+            <div id="characters" class="characters"></div>
+        </div>
+        <script src="js/daw11.js"></script>
+    </body>
+</html>
